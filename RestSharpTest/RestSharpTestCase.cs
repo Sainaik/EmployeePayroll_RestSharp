@@ -34,6 +34,9 @@ namespace RestSharpTest
 
         }
 
+
+        //Get Employee List
+
         [TestMethod]
         public void OncallingGetAPI_ReturnEmployeeList()
         {
@@ -50,6 +53,38 @@ namespace RestSharpTest
            
         }
 
-       
+        // UC2 Add employee json object 
+        
+        [TestMethod]
+        public void GivenEmployee_Post_ShouldReturnAddedEmployee()
+        {
+            //arrange
+            RestRequest request = new RestRequest("/employees", Method.POST);
+
+            JObject jObjectBody = new JObject();
+            jObjectBody.Add("Name", "Gayathri");
+            jObjectBody.Add("Salary", "900000");
+
+            request.AddParameter("application/json", jObjectBody, ParameterType.RequestBody);
+
+            //act
+            IRestResponse response = client.Execute(request);
+
+            //assert
+
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.Created);
+
+
+            Employee dataResponse = JsonConvert.DeserializeObject<Employee>(response.Content);
+
+            Assert.AreEqual("Gayathri", dataResponse.Name);
+
+            Assert.AreEqual("900000", dataResponse.Salary);
+
+
+        }
+        
+
+
     }
 }
