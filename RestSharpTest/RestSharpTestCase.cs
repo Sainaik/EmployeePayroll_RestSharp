@@ -10,11 +10,13 @@ using Newtonsoft.Json.Linq;
 namespace RestSharpTest
 {
     
-    //UC1 
+    
 
     [TestClass]
     public class RestSharpTestCase
     {
+
+        //UC1 
         RestClient client;
 
         [TestInitialize]
@@ -48,13 +50,17 @@ namespace RestSharpTest
 
             List<Employee> dataResponse = JsonConvert.DeserializeObject<List<Employee>>(response.Content);
 
-            Assert.AreEqual( 14, dataResponse.Count);
+            Assert.AreEqual( 8, dataResponse.Count);
 
            
         }
 
+<<<<<<< HEAD
         // UC2 Add employee json object 
         
+=======
+        //UC2
+>>>>>>> UC5-DeleteEmployee
         [TestMethod]
         public void GivenEmployee_Post_ShouldReturnAddedEmployee()
         {
@@ -83,7 +89,84 @@ namespace RestSharpTest
 
 
         }
+<<<<<<< HEAD
         
+=======
+
+
+        //UC3
+        [TestMethod]
+        public void givenMutipleEmployees_returnAddedEmployees()
+        {
+            List<Employee> employee = new List<Employee>();
+            employee.Add(new Employee("Anil", "300000"));
+            employee.Add(new Employee("Ram", "400000"));
+
+            foreach (var emp in employee)
+            {
+                RestRequest request = new RestRequest("/employee", Method.POST);
+
+                JObject jObject = new JObject();
+                jObject.Add("name", emp.Name);
+                jObject.Add("salary", emp.Salary);
+
+                request.AddParameter("application/json", jObject, ParameterType.RequestBody);
+
+
+                IRestResponse response = client.Execute(request);
+                Assert.AreEqual(response.StatusCode, HttpStatusCode.Created);
+
+            }
+
+            IRestResponse newResponse = getEmployeeList();
+
+            Assert.AreEqual(newResponse.StatusCode, HttpStatusCode.OK);
+
+            List<Employee> dataresponse = JsonConvert.DeserializeObject<List<Employee>>(newResponse.Content);
+
+            Assert.AreEqual(10, dataresponse.Count);
+
+            Console.WriteLine(newResponse.Content);
+
+
+        }
+        
+        [TestMethod]
+        public void UpdateEmployee_GivenID()
+        {
+            RestRequest request = new RestRequest("/employee/1", Method.PUT);
+            JObject jObject = new JObject();
+
+            jObject.Add("name", "Sai");
+            jObject.Add("salary", "5000000");
+
+
+            request.AddParameter("application/json", jObject, ParameterType.RequestBody);
+
+
+            IRestResponse response = client.Execute(request);
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
+
+            Employee dataresponse = JsonConvert.DeserializeObject<Employee>(response.Content);
+
+            Assert.AreEqual("Sai", dataresponse.Name);
+            Assert.AreEqual("5000000", dataresponse.Salary);
+
+        }
+
+       [TestMethod]
+        public void givenEmployeeId_deleteEmployee()
+        {
+            RestRequest request = new RestRequest("/employee/7", Method.DELETE);
+
+            IRestResponse response = client.Execute(request);
+
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
+
+            Console.WriteLine(response.Content);
+        }
+
+>>>>>>> UC5-DeleteEmployee
 
 
     }
