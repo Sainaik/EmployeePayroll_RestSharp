@@ -1,0 +1,13 @@
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\bin\Debug\netcoreapp3.1\EmployeePayrollRestSharp.exe
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\bin\Debug\netcoreapp3.1\EmployeePayrollRestSharp.deps.json
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\bin\Debug\netcoreapp3.1\EmployeePayrollRestSharp.runtimeconfig.json
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\bin\Debug\netcoreapp3.1\EmployeePayrollRestSharp.runtimeconfig.dev.json
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\bin\Debug\netcoreapp3.1\EmployeePayrollRestSharp.dll
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\bin\Debug\netcoreapp3.1\EmployeePayrollRestSharp.pdb
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.csprojAssemblyReference.cache
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.AssemblyInfoInputs.cache
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.AssemblyInfo.cs
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.csproj.CoreCompileInputs.cache
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.dll
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.pdb
+C:\Users\saiku\source\repos\EmployeePayrollRestSharp\EmployeePayrollRestSharp\obj\Debug\netcoreapp3.1\EmployeePayrollRestSharp.genruntimeconfig.cache
