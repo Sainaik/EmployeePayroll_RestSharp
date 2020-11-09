@@ -143,6 +143,19 @@ namespace RestSharpTest
 
         }
 
+       [TestMethod]
+        public void givenEmployeeId_deleteEmployee()
+        {
+            RestRequest request = new RestRequest("/employee/7", Method.DELETE);
+
+            IRestResponse response = client.Execute(request);
+
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
+
+            Console.WriteLine(response.Content);
+        }
+
+
 
     }
 }
